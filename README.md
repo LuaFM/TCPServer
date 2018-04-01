@@ -1,2 +1,2 @@
 # Socket TCPServer
-Server TCP Python 3
+Socket Server TCP Python 3
