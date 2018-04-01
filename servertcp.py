@@ -2,7 +2,7 @@
 # vim: set servertcp.py = <servertcp>:
 import socket,os
 
-server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+server = socket.socket(socket.AF_INET, socket.SOCK_STREAM) #AF_INET = IPV4 e SOCK_STREAM = TCP
 
 ip='0.0.0.0' #Se colocar um ip específico, o computador deve estar na rede do ip em questão
 port = 881   #Pode ser uma porta a sua escolha
