@@ -4,15 +4,15 @@ import socket,os
 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-ip='0.0.0.0' #Se colocar um ip específico, terá que o computador esta na rede do ip em questão
-port = 881
+ip='0.0.0.0' #Se colocar um ip específico, o computador deve estar na rede do ip em questão
+port = 881   #Pode ser uma porta a sua escolha
 
 try:
     server.bind((ip, port))
     server.listen(5)            #Por padrão são 5 conexões
     print('Ouvindo')
     (client_socket, address) = server.accept()
-    print('Endereço conectado' + address[0]) #No caso o address é um dupla com ip e porta
+    print('Endereço conectado' + address[0]) #No caso o address é um dupla com ip e porta, o valor 0 se refere ao ip
 
     while True:
         res = client_socket.recv(1024)
