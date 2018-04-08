@@ -13,7 +13,8 @@ try:
     server.listen(5)  # Por padrão são 5 conexões
     print("Ouvindo...")
     (client_socket, address) = server.accept()
-    print("Endereço conectado - " + address[0])  # No caso o address é um dupla com ip e porta, o valor 0 se refere ao ip
+    # No caso o address é um dupla com ip e porta, o valor 0 se refere ao ip
+    print("Endereço conectado - " + address[0])
 
     while True:
         res = client_socket.recv(1024)
