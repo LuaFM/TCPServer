@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-import socket,os
-
+import socket, os
 
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)   #AF_INET = IPV4 e SOCK_STREAM = TCP
 
 ip = "127.0.0.1"
-porta = 881
+porta = int(input("Digite a porta a ser usada pela conexão: "))
+
 
 client.connect((ip, porta))
 
